@@ -31,3 +31,26 @@ no coincide y el valor medio.
 
 El proceso se repite iterativamente hasta alcanzar 
 una precisión deseada que se establece al principio.
+
+1.3 Método de la Régula Falsi
+
+El método de la régula falsi es muy similar al método
+de la bisección. La diferencia está en que en lugar de 
+utilizar el valor medio del intervalo se hace una 
+estimación basada en la aproximación de que la función
+entre los extremos del intervalo considerado (a,b) es 
+muy similar a una recta. 
+
+En ese caso la estimación de la función es simplemente:
+
+f(x) = f(a) + ( f(b) - f(a) ) / (b-a) * (x-a)
+
+Como se busca el punto x=c tal que f(c)=0, la estimación
+permite despejar c que adopta la expresión:
+
+c = a - f(a) * (b-a) / ( f(b) - f(a) )
+
+El resto del procedimiento es igual que para el 
+método de la bisección. Se comprueba el signo de
+f(c) y se repite el proceso iterativamente 
+haciendo el intervalo cada vez más estrecho.

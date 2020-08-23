@@ -126,3 +126,23 @@ ecuaciones que puede expresarse de forma matricial.
 
 Una vez resuelto es solo es necesario sustituir
 para averiguar la solución deseada.
+
+3. Cálculo de Integrales
+
+3.1 Regla del Trapecio
+
+Para calcular la estimación de la integral
+la regla del trapecio utiliza un polinomio interpolador
+lineal P(x) que pasa por una serie de nodos predefinidos.
+
+Dada una función f(x) y unos extremos para la
+integral a y b la estimación para la integral 
+toma la forma:
+
+integral( f(x) ) = h/2 ( f(a)+f(b) ) + h * sum(f_k)
+
+Donde f_k = f(x_k) y x_k = a + (k-1) / h.
+
+Lógicamente el número de nodos interpoladores que 
+serán necesarios dependerán de la precisión h con
+la que se quiere realizar la estimación.

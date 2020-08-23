@@ -79,3 +79,50 @@ aproximación a la raíz, f(x2)=0 con lo cual:
 El proceso se repite iterativamente hasta que se
 obtiene una solución dentro del grado de precisión
 deseado.
+
+2. Cálculo de Derivadas
+
+2.1 Aproximación de Taylor
+
+Este cálculo se basa en tomar la función f(x) de
+la que quiere hallarse la derivada y tomar el 
+desarrollo de Taylor centrado en algunos puntos
+desplazados una pequeña cantidad h del punto x0 
+sobre el que queremos hallar la derivada.
+
+A continuación se toman estos desarrollos de 
+Taylor y operando sobre los mismos se pueden 
+obtener expresiones para la primera y la 
+segunda derivada. 
+
+Como resulta natural la expresión resultante
+dependerá del número de puntos sobre los que
+se toma la aproximación de Taylor.
+
+Tomando 4 puntos:
+
+df(x0) = (-f(x0+2h)+8f(x0+h)-8f(x0-h)+f(x0-2h))/12h
+
+Tomando 5 puntos:
+
+d2f(x0) = (-f(x0+2h)+16f(x0+h)-30f(x0)+16f(x0-h)-f(x0-2h))/12h^2
+
+2.2 Coeficientes Indeterminados
+
+El método de los coeficientes indeterminados
+es una generalización del método anterior
+y sigue exactamente la misma estrategia.
+
+La mejora con respecto al caso anterior es 
+que se dispone de una expresión general para
+el valor de la derivada k-ésima:
+
+f^(k)(x0) = (a1 f(x0+b1h) + a2 f(x0+b2h) + ... + an f(x0+bnh) )/(h^k)
+
+Los coeficientes ai son los coeficientes 
+indeterminados que se deben averiguar. Para
+encontrarlos se debe resolver un sistema de 
+ecuaciones que puede expresarse de forma matricial.
+
+Una vez resuelto es solo es necesario sustituir
+para averiguar la solución deseada.

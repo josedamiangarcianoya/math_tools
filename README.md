@@ -146,3 +146,20 @@ Donde f_k = f(x_k) y x_k = a + (k-1) / h.
 Lógicamente el número de nodos interpoladores que 
 serán necesarios dependerán de la precisión h con
 la que se quiere realizar la estimación.
+
+3.2 Regla de Simpson 1/3
+
+En este caso la regla de Simpson 1/3 utiliza
+un polinomio interpolador de segundo orden
+bajo tres nodos consecutivos.
+
+De esta forma al igual que en la regla del
+trapecio se obtiene una fórmula que permite
+el cálculo numérico de la integral:
+
+integral( f(x) ) = h/3( f(a)+f(b) )+2h/3 * sum(f_2k+1)+4h/3 * sum(f_2k)
+
+Donde f_k = f(x_k) y x_k = a + (k-1) / h.
+
+Nótese que esto permite separar la contribución
+de los términos pares e impares.

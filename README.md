@@ -178,3 +178,26 @@ integral( f(x) ) = 3h/8( f(a)+f(b) ) + 6h/8 * sum(f_3k+1) + 9h/8 * sum(f_3k-1 +f
 
 Donde f_k = f(x_k) y x_k = a + (k-1) / h siendo
 h la precisión deseada.
+
+3.4 Regla Recursiva del Trapecio
+
+Este método consiste en construir una serie de
+manera recursiva construida de tal manera que
+la misma converge al valor de la integral que 
+se quiere estimar.
+
+Como es lógico cada término de la serie puede
+calcularse a partir del anterior teniendo en 
+cuenta las bases de la regla del trapecio 
+obteniendo así la siguiente expresión para 
+cada uno de los términos:
+
+T(j) = 0.5 * T(j-1) + h * sum(f_2k-1)
+
+Donde f_2k-1 = f(x_2k-1) y x_2k-1 = a + (2k-1)*h
+siendo h = (b-a)/2^(j-1).
+
+Nótese que dada una precisión el valor estimado
+de la integral será simplemente el término de 
+la serie tal que se diferencie del anterior una
+cantidad menor que dicha precisión.

@@ -201,3 +201,21 @@ Nótese que dada una precisión el valor estimado
 de la integral será simplemente el término de 
 la serie tal que se diferencie del anterior una
 cantidad menor que dicha precisión.
+
+3.5 Regla Recursiva de Simpson 1/3
+
+Este método es de alguna forma una extensión de
+la regla recursiva del trapecio ya que hace uso
+de los términos de su serie para el cálculo de
+una nueva serie S(j). Cada uno de los términos
+toma el valor:
+
+S(j) = ( 4*T(j)-T(j-1) ) / 3
+
+Al igual que en el caso anterior la solución de
+la integral será el último término de la serie
+y dado que esta converge se puede establecer
+una precisión deseada y tomar como resultado
+aquel valor de la serie tal que la diferencia 
+con su valor anterior sea menor que dicha 
+precisión.

@@ -32,7 +32,7 @@ aux_par <- 0
 aux_impar <- 0
 
 for ( k in c(2:(2*n)) ) {
-	if ( k%%2 == 0 ) {
+	if ( k %% 2 == 0 ) {
 		value <- a+(k-1)*h
 		aux_par <- aux_par + f(value)
 	} else {

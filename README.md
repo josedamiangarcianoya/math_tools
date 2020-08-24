@@ -163,3 +163,18 @@ Donde f_k = f(x_k) y x_k = a + (k-1) / h.
 
 Nótese que esto permite separar la contribución
 de los términos pares e impares.
+
+3.3 Regla de Simpson 3/8
+
+En este caso la regla de Simpson 3/8 utiliza
+un polinomio interpolador de tercer orden
+bajo cuatro nodos consecutivos.
+
+De esta forma al igual que en la regla de 
+Simpson 1/3 se obtiene una fórmula que 
+permite el cálculo numérico de la integral:
+
+integral( f(x) ) = 3h/8( f(a)+f(b) ) + 6h/8 * sum(f_3k+1) + 9h/8 * sum(f_3k-1 +f_3k)
+
+Donde f_k = f(x_k) y x_k = a + (k-1) / h siendo
+h la precisión deseada.

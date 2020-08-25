@@ -219,3 +219,26 @@ una precisión deseada y tomar como resultado
 aquel valor de la serie tal que la diferencia 
 con su valor anterior sea menor que dicha 
 precisión.
+
+3.6 Regla de Integración de Romberg
+
+Al igual que la regla recursiva de Simpson 1/3
+la regla de integración de Romberg se basa en 
+la regla recursiva del trapecio.
+
+En particular la regla de Romberg propone 
+construir una matriz cuya primera columna
+es igual a la serie de la regla recursiva
+del trapecio. El resto de columnas se 
+calculan de manera iterativa por medio de 
+la expresión:
+
+R[j,k] = ( (4^(k-1)) * R[j,k-1] - R[j-1,k-1] ) / ( (4^(k-1)) - 1 )
+
+El resultado estimado para el valor de la 
+integral es entonces el elemento R[m,m] de 
+la matriz, donde m es la dimensión de dicha
+matriz.
+
+Nótese que con la fórmula de arriba algunos 
+elementos de la matriz quedan vacíos.
